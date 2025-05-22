@@ -2,6 +2,8 @@
 
 ![Design preview for the E-commerce product page coding challenge](./design/desktop-preview.jpg)
 
+https://para17sat.github.io/Parasat-s-js-project-3-parts-1-2-3/
+
 ## Welcome! 👋
 
 Thanks for checking out this front-end coding challenge.
