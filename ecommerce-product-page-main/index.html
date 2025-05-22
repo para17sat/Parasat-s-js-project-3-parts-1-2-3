@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frontend Mentor | E-commerce product page</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: rgb(255, 255, 255);
+      color: #333;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+      margin-bottom: 50px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .nav-menu {
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav-menu a {
+      color: #222;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    @media (max-width: 600px) {
+      .nav-menu {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+   
+    .logo.svg{
+    font-size: medium;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      justify-content: space-between;
+    }
+    
+    .main {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+  
+    .image-product img {
+      width: 100px;
+      margin: 5px;
+      border-radius: 10px;
+      flex-direction: column;
+    }
+
+    .bones-of-product {
+      max-width: 400px;
+    }
+
+    .bones-of-product h2 {
+      margin-top: 0;
+    }
+
+    .bones-of-product div {
+      margin-top: 20px;
+    }
+
+    .price-box {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .discount {
+      background-color: black;
+      color: white;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-left: 10px;
+      font-size: 14px;
+    }
+
+    .old-price {
+      text-decoration: line-through;
+      color: gray;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+
+    .cart-box {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .cart-box button {
+      padding: 10px 20px;
+      background-color: rgb(184, 84, 17);
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav" id="nav">
+    <ul class="nav-menu">
+      <div class="logo.svg">
+        <li> <i class="main icon" set="snakers"></i></li>
+      </div>
+      <li><a href="#">Collections</a></li>
+      <li><a href="#">Men</a></li>
+      <li><a href="#">Women</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="main" id="main">
+    <div class="image-product" id="image-product">
+      <img src="images/image-product-1-thumbnail.jpg" alt="img 1" />
+      <img src="images/image-product-2-thumbnail.jpg" alt="img 2" />
+      <img src="images/image-product-3-thumbnail.jpg" alt="img 3" />
+      <img src="images/image-product-4-thumbnail.jpg" alt="img 4" />
+      <img src="images/image-product-3-thumbnail.jpg" alt="img 5" />
+    </div>
+
+    <div class="bones-of-product" id="bones-of-product">
+      <h3>Sneaker Company</h3>
+      <h2>Fall Limited Edition Sneakers</h2>
+      <p>
+        These low-profile sneakers are your perfect casual wear companion. Featuring a
+        durable rubber outer sole, they’ll withstand everything the weather can offer.
+      </p>
+
+      <div class="price-box">
+        $125.00 <span class="discount">50%</span>
+        <div class="old-price">$250.00</div>
+      </div>
+
+      <div class="cart-box">
+        <span>0</span>
+        <button>Add to cart</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+  <script>
+    // Access elements by ID
+    const nav = document.getElementById("nav");
+    const main = document.getElementById("main");
+    const imageProduct = document.getElementById("image-product");
+    const bonesOfProduct = document.getElementById("bones-of-product");
+
+    console.log(nav);
+    console.log(main);
+    console.log(imageProduct);
+    console.log(bonesOfProduct);
+
+    // Elements inside bones
+    const bones = ["h3", "h2", "p"];
+    console.log(bones[0]); // h3
+    console.log(bones[1]); // h2
+    console.log(bones[2]); // p
+
+    // Navigation items loop
+    const navItems = ["Collections", "Men", "Women", "About", "Contact"];
+    navItems.forEach((item, index) => {
+      console.log(`${index}: ${item}`);
+    });
+  </script>
+</body>
+</html>
